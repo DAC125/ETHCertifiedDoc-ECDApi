@@ -1,6 +1,6 @@
 const Provider = require('@truffle/hdwallet-provider');
-const address = '0x053Df46f9738d3579Fd73af47f24D5d116bE4bd4';
-const privateKey = '3f019c3c295eeea6e17892b5e7f1412dc64e5966d85b6d8e1801d453ef0e41bd';
+const address = '0x8a7c5bA8035F832B1421aa9D6eC8df4FF2c815Dc';
+const privateKey = 'da8125d80786fc7855e7d990701b5c41a8e69cd46c45e4fc7788f90e3889adcf';
 
 const provider = new Provider(privateKey, 'https://rinkeby.infura.io/v3/74baca13162c4824bb3cc8e1094049e4');
 /**
@@ -63,14 +63,14 @@ module.exports = {
     // },
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
-    /*rinkeby: {
+    rinkeby: {
       provider: () => provider,
-      network_id: 4,*/
+      network_id: 4,
     // gas: 5500000,        // Ropsten has a lower block limit than mainnet
     // confirmations: 2,    // # of confs to wait between deployments. (default: 0)
     // timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
     // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
-     //},
+     },
     // Useful for private networks
     // private: {
     // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
