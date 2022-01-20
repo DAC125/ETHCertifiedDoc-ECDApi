@@ -9,8 +9,10 @@
   "author": "DiegoAcuña",
   "license": "ISC",
   "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.0",
     "express": "^4.17.2",
     "express-fileupload": "^1.2.1",
-    "ipfs-http-client": "^33.1.1"
+    "ipfs-http-client": "^33.1.1",
+    "web3": "^1.7.0"
   }
 }
