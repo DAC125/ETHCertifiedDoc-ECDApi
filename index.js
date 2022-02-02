@@ -31,11 +31,15 @@ app.post('/uploadDocument', (req, res) => {
   })
 });
 
-app.get('getDocument', (req, res) => {
-  console.log('hola')
-  res.status(200).send({
-    id: 'hola'
+app.get('/getDocument', (req, res) => {
+  solidityConnection.getDocument(req.body.id)
+  .then(result =>{
+    console.log("GET   Getting document by id..")
+    res.status(200).send({
+      document: `http://ipfs.infura.io/ipfs/${result.documentHash.hashDocument}`
+    })
   })
+  
 });
 
 

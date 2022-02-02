@@ -1,7 +1,7 @@
 const Web3 = require('web3');
 const MyContract = require('./build/contracts/DocumentsCertifiedContract.json');
-const address = '0x6E9371fD2dCAd5C009D7F575725c699187f5757a';
-const privateKey = '0a9f3d9019f2f169fd0fc0b5cd6e25eb9e56fc40b4f2fa7ff2555a6bad17415d';
+const address = '0x5668bE731c2Ffd21E10D75D3DC5754bEfe300a1A';
+const privateKey = '74de9c7cffa9a1937d8d3dde21c5f106f78c334f8387e7de85967c1ab35800f3';
 const infuraURL = 'https://rinkeby.infura.io/v3/74baca13162c4824bb3cc8e1094049e4';
 
 const uploadDocument = async (hashDocument) => {
