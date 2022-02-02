@@ -31,6 +31,13 @@ app.post('/uploadDocument', (req, res) => {
   })
 });
 
+app.get('getDocument', (req, res) => {
+  console.log('hola')
+  res.status(200).send({
+    id: 'hola'
+  })
+});
+
 
 app.listen(
   PORT,

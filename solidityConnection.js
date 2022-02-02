@@ -1,11 +1,11 @@
 const Web3 = require('web3');
 const MyContract = require('./build/contracts/DocumentsCertifiedContract.json');
-const address = '0x8a7c5bA8035F832B1421aa9D6eC8df4FF2c815Dc';
-const privateKey = 'da8125d80786fc7855e7d990701b5c41a8e69cd46c45e4fc7788f90e3889adcf';
+const address = '0x6E9371fD2dCAd5C009D7F575725c699187f5757a';
+const privateKey = '0a9f3d9019f2f169fd0fc0b5cd6e25eb9e56fc40b4f2fa7ff2555a6bad17415d';
 const infuraURL = 'https://rinkeby.infura.io/v3/74baca13162c4824bb3cc8e1094049e4';
 
 const uploadDocument = async (hashDocument) => {
-    const web3 = new Web3(infuraURL);
+    const web3 = new Web3('http://127.0.0.1:7545');
     const networkId = await web3.eth.net.getId();
     const myContract = new web3.eth.Contract(
         MyContract.abi,
@@ -34,4 +34,16 @@ const uploadDocument = async (hashDocument) => {
         hash: receipt.transactionHash
     }
 }
-module.exports = {uploadDocument}
+
+const getDocument = async (id) => {
+    const web3 = new Web3('http://127.0.0.1:7545');
+    const networkId = await web3.eth.net.getId();
+    const myContract = new web3.eth.Contract(
+        MyContract.abi,
+        MyContract.networks[networkId].address
+    );
+    return {
+        documentHash: await myContract.methods.documents(id).call()
+    }
+}
+module.exports = {uploadDocument, getDocument}
