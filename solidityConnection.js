@@ -1,8 +1,8 @@
 const Web3 = require('web3');
 const MyContract = require('./build/contracts/DocumentsCertifiedContract.json');
-const address = '0x5668bE731c2Ffd21E10D75D3DC5754bEfe300a1A';
-const privateKey = '74de9c7cffa9a1937d8d3dde21c5f106f78c334f8387e7de85967c1ab35800f3';
-const infuraURL = 'https://rinkeby.infura.io/v3/74baca13162c4824bb3cc8e1094049e4';
+const config = require('config');
+const address = config.get('wallet.address');
+const privateKey = config.get('wallet.privateKey');
 
 const uploadDocument = async (hashDocument) => {
     const web3 = new Web3('http://127.0.0.1:7545');

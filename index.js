@@ -11,6 +11,7 @@ app.use(upload())
 
 
 app.post('/uploadDocument', (req, res) => {
+  
   ipfs.add(req.files.file.data, (error, result) => {
     const documentHash = result[0].hash
     if (error) {
