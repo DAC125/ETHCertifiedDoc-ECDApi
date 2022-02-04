@@ -9,6 +9,9 @@ This API contains following request:
 *   Get Document Certified
 
 ## End-point: Certified Document
+API endpoint for **upload** and **certify** documents
+
+> A successful registration will result in a **HTTP 200** status code and a json response with document id and the transaction hash
 ### Method: POST
 >```
 >http://localhost:8080/uploadDocument
@@ -29,9 +32,10 @@ This API contains following request:
 ```
 
 
-⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
-
 ## End-point: Get Document Certified
+API endpoint to **Get** the certify document
+
+> A successful registration will result in a **HTTP 200** status code and a json response with the document url to view the file
 ### Method: GET
 >```
 >http://localhost:8080/getDocument
@@ -51,7 +55,7 @@ This API contains following request:
 }
 ```
 
+#### Author
+- [Diego Acuña Cerdas](https://github.com/DAC125)
+email: [diegoacuna170@gmail.com](mailto:diegoacuna170@gmail.com)
 
-⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
-_________________________________________________
-Powered By: [postman-to-markdown](https://github.com/bautistaj/postman-to-markdown/)
