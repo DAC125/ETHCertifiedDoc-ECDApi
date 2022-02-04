@@ -20,7 +20,7 @@ API endpoint for **upload** and **certify** documents
 
 |Param|value|Type|
 |---|---|---|
-|file|/C:/Users/dcapr/OneDrive/Documents/INNOVAAP/INNOVAAP_API/Lorem_ipsum.pdf|file|
+|file|/Lorem_ipsum.pdf|file|
 
 
 ### Response: 200
