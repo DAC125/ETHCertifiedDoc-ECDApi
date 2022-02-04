@@ -17,6 +17,7 @@ const swaggerOptions = {
       },
       servers: ["http://localhost:8080"]
     }
+    
   },
   apis: ["index.js"]
 };
@@ -24,7 +25,7 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsDoc(swaggerOptions)
 const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
 
-app.use('/appi-docs',swaggerUi.serve, swaggerUi.setup(swaggerDocs))
+app.use('/api-docs',swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 app.use(express.json())
 app.use(upload())
 
@@ -32,6 +33,8 @@ app.use(upload())
  * @swagger
  * /uploadDocument:
  *  post:
+ *    tags:
+ *    - Certified document
  *    description: API endpoint for upload and certify documents
  *    parameters:
  *    - in: "formData"
@@ -70,11 +73,13 @@ app.post('/uploadDocument', (req, res) => {
  * @swagger
  * /getDocument:
  *  get:
+ *    tags:
+ *    - Certified document
  *    description: API endpoint to Get the certify document
  *    parameters:
- *    - in: "body"
+ *    - in: "query"
  *      name: "id"
- *      type: "object"
+ *      type: "integer"
  *      description: " Gets the certify document"
  *      required: true
  * 
