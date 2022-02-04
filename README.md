@@ -38,15 +38,14 @@ API endpoint to **Get** the certify document
 > A successful registration will result in a **HTTP 200** status code and a json response with the document url to view the file
 ### Method: GET
 >```
->http://localhost:8080/getDocument
+>http://localhost:8080/getDocument?id=1
 >```
-### Body (**raw**)
+### Query Params
 
-```json
-{
-    "id": 1
-}
-```
+|Param|value|
+|---|---|
+|id|1|
+
 
 ### Response: 200
 ```json
@@ -54,6 +53,7 @@ API endpoint to **Get** the certify document
     "document": "http://ipfs.infura.io/ipfs/Qmdk3gwwrfoWif9zJ3YTahH7fGq3JgqDBR3G2kqvbAqCro"
 }
 ```
+
 
 #### Author
 - [Diego Acuña Cerdas](https://github.com/DAC125)
