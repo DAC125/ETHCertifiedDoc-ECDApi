@@ -16,7 +16,7 @@ run api
 ```
 node index.js
 ```
-to test and try api, go [documentation](http://localhost:8080/api-docs) api.
+to test and try api, go to the [documentation](http://localhost:8080/api-docs) api.
 
 
 
