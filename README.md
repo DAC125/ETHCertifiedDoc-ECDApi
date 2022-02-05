@@ -7,6 +7,19 @@ This API contains following request:
 *   Certified Document
 *   Get Document Certified
 
+## Run, install and test the API
+Install all needed modules 
+```
+npm install
+```
+run api 
+```
+node index.js
+```
+to test and try api, go [documentation](localhost:8080/api-docs) api.
+
+
+
 ## End-point: Certified Document
 API endpoint for **upload** and **certify** documents
 
