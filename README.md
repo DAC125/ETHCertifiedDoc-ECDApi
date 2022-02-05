@@ -16,9 +16,7 @@ run api
 ```
 node index.js
 ```
-to test and try api, go to the [documentation](http://localhost:8080/api-docs) api.
-
-
+To test and try api, go to the [documentation](http://localhost:8080/api-docs) api.
 
 ## End-point: Certified Document
 API endpoint for **upload** and **certify** documents
