@@ -7,6 +7,23 @@ This API contains following request:
 *   Certified Document
 *   Get Document Certified
 
+## Run, install and test the API for developer environment
+Install [Ganache Truffle Suite](https://trufflesuite.com/ganache/)
+
+Set the address and private key from ganacha un config file in
+```
+config/default.json
+```
+Install all needed modules
+```
+npm install
+```
+run api 
+```
+node index.js
+```
+To test and try api, go to the [documentation](http://localhost:8080/api-docs) api.
+
 ## End-point: Certified Document
 API endpoint for **upload** and **certify** documents
 
