@@ -6,8 +6,14 @@ const swaggerUi = require('swagger-ui-express')
 const solidityConnection = require("./solidityConnection")
 const app = express();
 const PORT = 8080;
+const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
+app.use(express.json())
+app.use(upload())
 
-const swaggerOptions = {
+/**
+ * Constant to set the swagger documentation
+ */
+ const swaggerOptions = {
   swaggerDefinition: {
     info: {
       title: 'Ethereum certified Documents API - ECD API',
@@ -21,13 +27,8 @@ const swaggerOptions = {
   },
   apis: ["index.js"]
 };
-
 const swaggerDocs = swaggerJsDoc(swaggerOptions)
-const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
-
 app.use('/api-docs',swaggerUi.serve, swaggerUi.setup(swaggerDocs))
-app.use(express.json())
-app.use(upload())
 
 /**
  * @swagger
@@ -87,7 +88,6 @@ app.post('/uploadDocument', (req, res) => {
  *      '200':
  *        description: Return a json response with document id and the transaction hash
  */
-
 app.get('/getDocument', (req, res) => {
   solidityConnection.getDocument(req.query.id)
   .then(result =>{
@@ -98,8 +98,6 @@ app.get('/getDocument', (req, res) => {
   })
   
 });
-
-
 
 app.listen(
   PORT,

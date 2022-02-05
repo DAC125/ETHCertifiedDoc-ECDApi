@@ -4,6 +4,11 @@ const config = require('config');
 const address = config.get('wallet.address');
 const privateKey = config.get('wallet.privateKey');
 
+/**
+ * 
+ * @param {string} hashDocument Hash of document stored in IFPS 
+ * @returns {object} Retuns the transaction hash after upload in blockchain
+ */
 const uploadDocument = async (hashDocument) => {
     const web3 = new Web3('http://127.0.0.1:7545');
     const networkId = await web3.eth.net.getId();
@@ -35,6 +40,11 @@ const uploadDocument = async (hashDocument) => {
     }
 }
 
+/**
+ * 
+ * @param {integer} id id of document hash in blackchain 
+ * @returns {object} hash docuemnt of IPFS
+ */
 const getDocument = async (id) => {
     const web3 = new Web3('http://127.0.0.1:7545');
     const networkId = await web3.eth.net.getId();
