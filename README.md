@@ -7,7 +7,7 @@ This API contains following request:
 *   Certified Document
 *   Get Document Certified
 
-## Run, install and test the API for develop environmet
+## Run, install and test the API for developer environment
 Install [Ganache Truffle Suite](https://trufflesuite.com/ganache/)
 
 Set the address and private key from ganacha un config file in
