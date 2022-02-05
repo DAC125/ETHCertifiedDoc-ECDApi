@@ -13,6 +13,8 @@ Set the address and private key from ganacha un config file in
 ```
 config/default.json
 ```
+Install all needed modules
+```
 npm install
 ```
 run api 
