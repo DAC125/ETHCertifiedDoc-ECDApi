@@ -7,8 +7,11 @@ This API contains following request:
 *   Certified Document
 *   Get Document Certified
 
-## Run, install and test the API
-Install all needed modules 
+## Run, install and test the API for develop environmet
+Install [Ganache Truffle Suite](https://trufflesuite.com/ganache/)
+Set the address and private key from ganacha un config file in
+```
+config/default.json
 ```
 npm install
 ```
