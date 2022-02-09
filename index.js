@@ -62,7 +62,7 @@ app.post('/uploadDocument', (req, res) => {
       console.log("POST   Upload Document SUCCESSFULLY")
       res.status(200).send({
           id: result.id,
-          hash: result.hash
+          transactionHash: result.hash
       })
     })
     
@@ -89,11 +89,14 @@ app.post('/uploadDocument', (req, res) => {
  *        description: Return a json response with document id and the transaction hash
  */
 app.get('/getDocument', (req, res) => {
+  console.log(req.query.id)
   solidityConnection.getDocument(req.query.id)
   .then(result =>{
     console.log("GET   Getting document by id..")
+    console.log(result)
     res.status(200).send({
-      document: `http://ipfs.infura.io/ipfs/${result.documentHash.hashDocument}`
+      document: `http://ipfs.infura.io/ipfs/${result.documentHash}`
+      
     })
   })
   

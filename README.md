@@ -42,8 +42,7 @@ API endpoint for **upload** and **certify** documents
 ### Response: 200
 ```json
 {
-    "id": 1,
-    "hash": "0x20973e7e3471d4f2e6f90dce06a1f07572a713596f71f4f70b886e42114f0088"
+    "transactionHash": "0x438cc086c7452003b2b9795e57fd4c46ca86cdb7de5499e1d75c21cf2eb52ffb"
 }
 ```
 
@@ -54,13 +53,13 @@ API endpoint to **Get** the certify document
 > A successful registration will result in a **HTTP 200** status code and a json response with the document url to view the file
 ### Method: GET
 >```
->http://localhost:8080/getDocument?id=1
+>http://localhost:8080/getDocument?id=0x438cc086c7452003b2b9795e57fd4c46ca86cdb7de5499e1d75c21cf2eb52ffb
 >```
 ### Query Params
 
 |Param|value|
 |---|---|
-|id|1|
+|id|0x438cc086c7452003b2b9795e57fd4c46ca86cdb7de5499e1d75c21cf2eb52ffb|
 
 
 ### Response: 200
