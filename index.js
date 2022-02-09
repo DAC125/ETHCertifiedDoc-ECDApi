@@ -46,7 +46,7 @@ app.use('/api-docs',swaggerUi.serve, swaggerUi.setup(swaggerDocs))
  * 
  *    responses:
  *      '200':
- *        description: Return a json response with document id and the transaction hash
+ *        description: Return a json response with transaction hash
  */
 app.post('/uploadDocument', (req, res) => {
   
@@ -86,14 +86,12 @@ app.post('/uploadDocument', (req, res) => {
  * 
  *    responses:
  *      '200':
- *        description: Return a json response with document id and the transaction hash
+ *        description: Return a json response with a URL with HashDocument on IFPS 
  */
 app.get('/getDocument', (req, res) => {
-  console.log(req.query.id)
   solidityConnection.getDocument(req.query.id)
   .then(result =>{
     console.log("GET   Getting document by id..")
-    console.log(result)
     res.status(200).send({
       document: `http://ipfs.infura.io/ipfs/${result.documentHash}`
       
