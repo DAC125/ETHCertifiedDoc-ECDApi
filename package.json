@@ -1,0 +1,23 @@
+{
+  "name": "innovap_api",
+  "version": "1.0.0",
+  "description": "api to upload document to blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DiegoAcuña",
+  "license": "ISC",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.0",
+    "config": "^3.3.7",
+    "ethereum-input-data-decoder": "^0.3.5",
+    "express": "^4.17.2",
+    "express-fileupload": "^1.2.1",
+    "ipfs-http-client": "^33.1.1",
+    "nodemon": "^2.0.15",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.3.0",
+    "web3": "^1.7.0"
+  }
+}
