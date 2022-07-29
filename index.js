@@ -80,7 +80,7 @@ app.post('/uploadDocument', (req, res) => {
  *    parameters:
  *    - in: "query"
  *      name: "id"
- *      type: "integer"
+ *      type: "string"
  *      description: " Gets the certify document"
  *      required: true
  * 
